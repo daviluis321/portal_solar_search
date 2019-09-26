@@ -50,9 +50,9 @@ Dica: Utilize alguma API pública para descobrir cidade e estado através do CEP
 
 #### Requisitos Secundários
 
-* Implementar um filtro simples por preço na tela inicial, trazendo os resultados ordenados por nome e adicionando paginação para mostrar somente 6 itens por página.
+* Implementar um filtro simples que ordene por preço na tela inicial, trazendo os resultados ordenados por nome e adicionando paginação para mostrar somente 6 itens por página.
 
-* Aplicar um segundo filtro baseado no anterior, apenas mudando de valor do produto para KWP.
+* Aplicar um segundo filtro baseado no anterior, ordenando por KWP.
 
 * Implementar função para calcular o peso cubado do produto e persistir isso no banco.
 Dica: [Cálculo para o peso cubado](https://blog.cargobr.com/cubagem-sem-misterio/) -> `Comprimento x Largura x Altura x Fator cubagem (300)`
