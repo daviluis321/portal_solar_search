@@ -57,7 +57,7 @@ Dica: Utilize alguma API pública para descobrir cidade e estado através do CEP
 * Implementar função para calcular o peso cubado do produto e persistir isso no banco.
 Dica: [Cálculo para o peso cubado](https://blog.cargobr.com/cubagem-sem-misterio/) -> `Comprimento x Largura x Altura x Fator cubagem (300)`
 
-* Modificar consulta do custo do frete afim de trazer o valor mais barato para o usuário.
+* Modificar consulta do custo do frete afim de trazer o valor com o PESO MENOR do produto, ou seja, o valor do frete não importa e sim o peso do produto.
 Dica: Verifique o valor baseado no peso do produto ou no peso cubado. (menor = melhor)
 
 * Fazer ao menos testes unitários para serviços e métodos criados para a recomendação de geradores, consulta de CEP e a busca simples por nome, mas não se limitando, testes são sempre bem vindos.
