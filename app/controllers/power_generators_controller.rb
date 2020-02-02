@@ -1,5 +1,5 @@
 class PowerGeneratorsController < ApplicationController
   def index
-    @power_generators = PowerGenerator.all
+    @power_generators = PowerGeneratorService.all_power_generators
   end
 end
