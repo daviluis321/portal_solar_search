@@ -1,0 +1,13 @@
+<div class="modal-header">
+  <h4 id="myModalLabel">Frete </h4>
+</div>
+<div class="modal-body">
+  <label>Cep: <%= params[:zipcode] %> </label><br>
+  <label>Cidade: <%= params[:address]["city"]%></label><br>
+  <label>Estado: <%= params[:address]["state"] %></label><br>
+  <label>Bairro: <%= params[:address]["district"] %> </label><br>
+  <label>Endereço: <%= params[:address]["address"] %> </label><br>
+<div>
+<div class="botao_voltar justify-content-center" style="display:flex">
+  <div class="btn btn-warning btn-circle"><%= link_to "Voltar", root_path%></div>
+</div>

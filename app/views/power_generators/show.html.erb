@@ -31,7 +31,14 @@
         </tr>
       </tbody>
     </table>
-   
+    <div>
+      <%= form_tag(new_freight_path, method: :get) do %>
+        <label style="margin-top:10px"> CEP: </label>
+        <%= text_field_tag :zipcode, params[:zipcode], class: "text-frete", placeholder: "00000-000", maxlength: "9" %>
+        <%= hidden_field_tag :id, @power_generator.id %>
+        <%= button_to 'Calcular', new_freight_path, {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: 'btn btn-warning btn-circle' } %><br>
+      <% end %>   
+    </div>
   </div><br>
   <div class="botao_voltar justify-content-center" style="display:flex">
     <div class='btn btn-warning btn-circle'>

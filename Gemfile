@@ -15,6 +15,7 @@ gem 'uglifier', '>= 1.3.0'
 gem "roo", "~> 2.8.0"
 gem "rubycritic", "~> 4.2"
 gem "kaminari", "~> 1.2"
+gem "httparty", "~> 0.17.3"
 
 source "https://rails-assets.org" do
   gem "rails-assets-jquery"
@@ -39,3 +40,4 @@ group :test do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
