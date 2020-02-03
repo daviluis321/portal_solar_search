@@ -29,6 +29,10 @@ class PowerGeneratorService
     @power_generators =  @power_generators.where(price: params[:keyword]) if params[:search_for_select] == 'price'
   end
 
+  def specific_power_generator
+    @power_generator = PowerGenerator.find(params[:id])
+  end
+
   private
     def power_generators_params
       params.require(:power_generators).permit(:name)

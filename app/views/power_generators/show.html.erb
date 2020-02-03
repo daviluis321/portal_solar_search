@@ -1,0 +1,42 @@
+<div class="container">
+  <h3 style="text-align: center; padding-top: 60px"> <%= @power_generator.name %> </h3>
+  <div class='square'>
+    <p class="price"><%= number_to_currency(@power_generator.price, unit: "R$ ", precision: 2, :separator => ",", :delimiter => ".") %></p>
+    <div style="text-align:center">
+      <%= image_tag @power_generator.image_url, class: 'img_description' %><br><br>
+    </div>
+    <%= @power_generator.description %><br><br>
+    <h3 style="text-align:center"> Especificações </h3>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Fabricante</th>
+          <th>Material</th>
+          <th>Altura</th>
+          <th>Largura</th>
+          <th>Comprimento</th>
+          <th>Peso</th>
+          <th>KwP</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= @power_generator.manufacturer %></td>
+          <td><%= @power_generator.structure_type.capitalize %></td>
+          <td><%= @power_generator.height %></td>
+          <td><%= @power_generator.width %></td>
+          <td><%= @power_generator.lenght %></td>
+          <td><%= @power_generator.weight %></td>
+          <td><%= @power_generator.kwp %></td>
+        </tr>
+      </tbody>
+    </table>
+   
+  </div><br>
+  <div class="botao_voltar justify-content-center" style="display:flex">
+    <div class='btn btn-warning btn-circle'>
+      <%= link_to "Voltar", root_path %>
+    </div>
+  <div>
+</div>
+
