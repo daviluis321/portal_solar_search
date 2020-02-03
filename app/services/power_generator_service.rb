@@ -6,8 +6,14 @@ class PowerGeneratorService
   end
 
   def all_power_generators
-    @parameter = params[:search]
-    PowerGenerator.page(params[:page]).per(6)
+    @search = params['search']
+    @power_generators = PowerGenerator.all
+    full_search if @search.present?
+    @power_generators = Kaminari.paginate_array(@power_generators).page(params[:page]).per(6)
+  end
+
+  def full_search
+    @power_generators = PowerGenerator.all.where('name LIKE :search or description LIKE :search', search: @search)
   end
 
   private
